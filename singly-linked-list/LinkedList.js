@@ -25,8 +25,34 @@ LinkedList.prototype.add = function (data) {
   this.size++;
 };
 
-// Fn to insert a newgit  node at a given location
-LinkedList.prototype.insertAt = function (data, index) {};
+// Fn to insert a new  node at a given location
+LinkedList.prototype.insertAt = function (data, index) {
+  // Check that provided index is valid, and log to console if not
+  if (index < 0 || index > this.size) {
+    console.log(`Index with value ${index} is out of bounds.`);
+  } else {
+    // Create a new node to insert
+    const newNode = new ListNode(data);
+
+    // if index = 0, make the new element the head
+    if (index === 0) {
+      newNode.next = this.head;
+      this.head = newNode;
+    } else {
+      let currentNode = this.head;
+      let prevNode = null;
+      let counter = 0;
+      while (counter < index) {
+        prevNode = currentNode;
+        currentNode = currentNode.next;
+        counter++;
+      }
+      prevNode.next = newNode;
+      newNode.next = currentNode;
+    }
+    this.size++;
+  }
+};
 
 // Fn to remove a node at a given index
 LinkedList.prototype.removeByIndex = function (index) {};
