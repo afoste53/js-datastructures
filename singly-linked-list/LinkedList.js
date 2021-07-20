@@ -25,7 +25,7 @@ LinkedList.prototype.add = function (data) {
   this.size++;
 };
 
-// Fn to insert a new node at a given location
+// Fn to insert a newgit  node at a given location
 LinkedList.prototype.insertAt = function (data, index) {};
 
 // Fn to remove a node at a given index
