@@ -17,4 +17,6 @@ q.dequeue();
 q.dequeue();
 q.dequeue();
 
+console.log(q.peek());
+
 q.print();
