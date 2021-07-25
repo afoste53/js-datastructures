@@ -20,7 +20,7 @@ Queue.prototype.dequeue = function () {
 
 // Returns the first item in the Queue without removing it
 Queue.prototype.peek = function () {
-  return this.queue[0];
+  return this.isEmpty() ? "Empty Queue's are sad queues" : this.queue[0];
 };
 
 // Checks to see if Queue is empty
@@ -33,8 +33,10 @@ Queue.prototype.print = function () {
   let str = "";
   let iter = 0;
   while (iter < this.queue.length) {
-    str += this.queue[iter] + " ";
+    str += this.queue[iter] + ", ";
     iter++;
   }
-  return str;
+  console.log(str);
 };
+
+export default Queue;
