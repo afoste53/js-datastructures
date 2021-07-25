@@ -1,4 +1,4 @@
-import ListNode from "../ListNode";
+import ListNode from "./ListNode";
 
 class LinkedList {
   constructor() {
