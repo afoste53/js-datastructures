@@ -24,3 +24,6 @@ console.log("Is it empty?", stack.isEmpty());
 console.log("Search for peen", stack.search("peen"));
 stack.push("peen");
 console.log("Search for peen", stack.search("peen"));
+
+console.log(stack.length());
+stack.print();

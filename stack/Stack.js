@@ -49,7 +49,7 @@ Stack.prototype.print = function () {
   let iter = 0;
   let str = "";
   while (iter < this.top) {
-    str += this.stack[iter] + " ";
+    str += this.stack[iter] + ", ";
     iter++;
   }
   console.log(str);
