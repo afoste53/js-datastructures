@@ -21,7 +21,7 @@ Stack.prototype.pop = function () {
 
 // Peek
 Stack.prototype.peek = function () {
-  return this.stack[this.top - 1];
+  return this.isEmpty() ? "The stack is empty" : this.stack[this.top - 1];
 };
 
 // Length
