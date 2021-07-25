@@ -1,4 +1,4 @@
-import ListNode from "./ListNode";
+import ListNode from "../ListNode";
 
 class LinkedList {
   constructor() {
@@ -42,20 +42,43 @@ LinkedList.prototype.insertAt = function (data, index) {
       let currentNode = this.head;
       let prevNode = null;
       let counter = 0;
+      // find index
       while (counter < index) {
         prevNode = currentNode;
         currentNode = currentNode.next;
         counter++;
       }
+      // add the new node
       prevNode.next = newNode;
       newNode.next = currentNode;
     }
+    // update size of list
     this.size++;
   }
 };
 
 // Fn to remove a node at a given index
-LinkedList.prototype.removeByIndex = function (index) {};
+LinkedList.prototype.removeByIndex = function (index) {
+  // Check that provided index is valid, and log to console if not
+  if (index < 0 || index >= this.size) {
+    console.log(`Index with value ${index} is out of bounds.`);
+  } else {
+    // Find node in question and remove
+    let currentNode = this.head;
+    let prevNode = currentNode;
+    let counter = 0;
+    // search for the index
+    while (counter < index) {
+      prevNode = currentNode;
+      currentNode = currentNode.next;
+      counter++;
+    }
+    // delete node
+    prevNode.next = currentNode.next;
+  }
+  // Update size
+  this.size--;
+};
 
 // Fn to remove a node with a particular value
 // Removes only the first instance
