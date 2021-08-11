@@ -22,3 +22,13 @@ bst.insert(90);
 //
 // console.log("bst.root.right.left: ", bst.root.right.left);
 // console.log("bst.root.right.right: ", bst.root.right.right);
+
+// search
+// console.log("BST: ", bst);
+console.log("Search 10; ", bst.search(10));
+console.log("Search 90: ", bst.search(90));
+console.log("Search 8: ", bst.search(8));
+console.log("Search 100: ", bst.search(100));
+console.log("Search 6: ", bst.search(6));
+console.log("Search -6: ", bst.search(-6));
+console.log("Search 11: ", bst.search(11));
